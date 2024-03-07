@@ -8,6 +8,12 @@ import Page from './Page';
 
 
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import axios from 'axios'
+axios.defaults.baseURL = "https://efe4-16-171-250-212.ngrok-free.app";
+axios.defaults.headers = {
+  "Content-Type": "application/json",
+  "ngrok-skip-browser-warning": "69420"
+};
 
 function App() {
   return (

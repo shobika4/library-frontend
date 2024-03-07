@@ -27,7 +27,7 @@ function Page() {
 
   const fetchBooks = async () => {
     try {
-      const response = await fetch('http://localhost:5000/books');
+      const response = await fetch('/books');
       const data = await response.json();
       setBooks(data);
     } catch (error) {

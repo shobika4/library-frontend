@@ -18,7 +18,7 @@ function Page1() {
 
   const fetchBooks = async () => {
     try {
-      const response = await fetch('http://localhost:5000/books');
+      const response = await fetch('/books');
       const data = await response.json();
       setBooks(data);
     } catch (error) {
@@ -28,7 +28,7 @@ function Page1() {
 
   const handleAddBook = async () => {
     try {
-      const response = await fetch('http://localhost:5000/books', {
+      const response = await fetch('/books', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ function Page1() {
 
   const handleDeleteBook = async (id) => {
     try {
-      await fetch(`http://localhost:5000/books/${id}`, {
+      await fetch(`/books/${id}`, {
         method: 'DELETE',
       });
       fetchBooks(); // Refresh books list after deleting
